@@ -4,7 +4,9 @@
     <color name="colorPrimaryDark">#7c4dff</color>
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="lightgray">#ededed</color>
+    <color name="lavendergray">#C4C3D0</color>
     <color name="deeppurple">#7c4dff</color>
+    <color name="silver">#C0C0C0</color>
     <color name="yellow">#ffb300</color>
     <color name="green">#00bfa5</color>
     <color name="colorAccent">#FF4081</color>
