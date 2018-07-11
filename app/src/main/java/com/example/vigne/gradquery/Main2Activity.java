@@ -4,16 +4,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.concurrent.ExecutionException;
 
 public class Main2Activity extends AppCompatActivity {
 
+    TextView NewText;
     String verbalscore,quantscore,toeflscore;
     int verbal_int,quant_int,toefl_int;
     String[]num;
     public void init(){
 
+        NewText = (TextView)findViewById(R.id.textview_header);
         Bundle bundle= getIntent().getExtras();
         verbalscore=bundle.getString("verbal_score");
         verbal_int=Integer.parseInt(verbalscore);
@@ -23,7 +26,9 @@ public class Main2Activity extends AppCompatActivity {
          toefl_int=Integer.parseInt(toeflscore);
         if(verbal_int>170 || quant_int>170|| toefl_int>120)
         {
-            num=new String[]{"Please enter your valid score for", "GRE","TOEFL"};
+
+            NewText.setText(" Please enter your valid score for");
+            num=new String[]{ "GRE","TOEFL"};
         }
          else if(verbal_int>=165 && quant_int>=165 && toefl_int>=100)
         {
@@ -60,25 +65,29 @@ public class Main2Activity extends AppCompatActivity {
                     "Northeastern University"};
         }
 
-        else if(verbal_int>=145 &&quant_int>=145 && toefl_int>=75){
-            num=new String[]{"Colorado State University" ,
-                    "Illinois Institute of Technology" ,
-                    "Clemson University" ,
-                    "University of Central Florida" ,
-                    "University of Cincinnati" ,
-                    "Santa Clara University" ,
-                    "Santa Clara University" ,
+        else if(verbal_int>=140 &&quant_int>=140 && toefl_int>=78){
+            num=new String[]{
                     "Mississippi State University" ,
                     "University of North Carolina" ,
                     "Michigan Technological University" ,
                     "University of Texas Arlington"};
         }
-        else if (verbal_int>140 && quant_int>140 && toefl_int<75){
-            num=new String[]{"Sorry","Please consider retaking the exams!!"};
+        else if (verbal_int>=135 && quant_int>=135 && toefl_int>=75){
+            num=new String[]{"Colorado State University" ,
+                    "Illinois Institute of Technology" ,
+                    "Clemson University" ,
+                    "University of Central Florida" ,
+                    "University of Cincinnati" ,
+                    "Santa Clara University" };
         }
-        else if(verbal_int<130 || quant_int<130|| toefl_int<0)
+        else if(verbal_int>=130 && quant_int>=130 && toefl_int>=0){
+            NewText.setText(" Sorry!!");
+            num=new String[]{"Please consider retaking the exams"};
+        }
+        else
         {
-            num=new String[]{"Please enter your valid score for", "GRE","TOEFL"};
+            NewText.setText(" Please enter your valid score for");
+            num=new String[]{ "GRE","TOEFL"};
         }
         ArrayAdapter adapter= new ArrayAdapter<String>(this,R.layout.activity_listview,num);
         ListView listView = (ListView) findViewById(R.id.mobile_list);

@@ -6,10 +6,20 @@
     android:background="#C4C3D0"
     tools:context=".Main2Activity" >
 
+    <TextView
+        android:id="@+id/textview_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textSize="14sp"
+        android:text="You have great chance to get into"
+        android:textStyle="bold" />
     <ListView
+
         android:id="@+id/mobile_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+
     </ListView>
 
 </LinearLayout>

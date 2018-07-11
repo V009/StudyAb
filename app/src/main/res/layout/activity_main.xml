@@ -13,47 +13,45 @@
     android:padding="10dp"
     tools:layout_editor_absoluteY="25dp">
 
-    <ImageView
-        android:layout_width="372dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/images" />
+
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:padding="10dp">
-    <TextView
-        android:id="@+id/textView_Exam"
-        android:layout_width="398dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:text="ENTER YOUR SCORES"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_Exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="ENTER YOUR SCORES"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_Gre"
-        android:layout_width="398dp"
-        android:layout_height="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="GRE"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <TextView
             android:id="@+id/textView6_Verb"
-            android:layout_width="176dp"
-            android:layout_height="49dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Verbal Score :"
             android:textSize="18sp"
@@ -62,21 +60,21 @@
         <EditText
             android:id="@+id/editText_Verbal"
             android:layout_width="wrap_content"
-            android:layout_height="49dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="130-170"
             android:inputType="number"
             android:padding="10dp" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
 
         <TextView
             android:id="@+id/textView_Quant"
-            android:layout_width="176dp"
-            android:layout_height="49dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:paddingTop="12dp"
             android:text="Quant Score :"
@@ -86,7 +84,7 @@
         <EditText
             android:id="@+id/editText8"
             android:layout_width="wrap_content"
-            android:layout_height="49dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="130-170"
             android:inputType="number"
@@ -95,13 +93,13 @@
             android:paddingBottom="10dp"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
 
         <TextView
             android:id="@+id/textView_Toefl"
-            android:layout_width="178dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:paddingTop="12dp"
@@ -117,20 +115,23 @@
         <EditText
             android:id="@+id/editText_Toefl"
             android:layout_width="wrap_content"
-            android:layout_height="49dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="0-120"
             android:inputType="number"
             android:padding="10dp" />
-    </LinearLayout>
 
+
+    </LinearLayout>
         <Button
             android:id="@+id/button_Submit"
-            android:layout_width="398dp"
-            android:layout_height="49dp"
-            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:enabled="false"
+            android:padding="10dp"
+            android:layout_gravity="center"
             android:text="SEARCH UNIVERSITIES"
             android:textColor="#ffff" />
+
     </LinearLayout>
 </LinearLayout>

@@ -18,7 +18,11 @@ public class WelcomeActivity extends AppCompatActivity {
             public void run() {
                 Intent i= new Intent(WelcomeActivity.this,HomeActivity.class);
                 startActivity(i);
+                WelcomeActivity.this.finish();
             }
         },SPLASH_TIME_OUT);
+
+
+
     }
 }
